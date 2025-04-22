@@ -152,83 +152,52 @@ void Image::_get_pixelb(int p_x, int p_y, uint32_t p_pixel_size, const uint8_t *
 int Image::get_format_pixel_size(Format p_format) {
 	switch (p_format) {
 		case FORMAT_L8:
+		case FORMAT_R8:
+		case FORMAT_DXT1:
+		case FORMAT_DXT3:
+		case FORMAT_DXT5:
+		case FORMAT_RGTC_R:
+		case FORMAT_RGTC_RG:
+		case FORMAT_BPTC_RGBA:
+		case FORMAT_BPTC_RGBF:
+		case FORMAT_BPTC_RGBFU:
+		case FORMAT_ETC:
+		case FORMAT_ETC2_R11:
+		case FORMAT_ETC2_R11S:
+		case FORMAT_ETC2_RG11:
+		case FORMAT_ETC2_RG11S:
+		case FORMAT_ETC2_RGB8:
+		case FORMAT_ETC2_RGBA8:
+		case FORMAT_ETC2_RGB8A1:
+		case FORMAT_ETC2_RA_AS_RG:
+		case FORMAT_DXT5_RA_AS_RG:
+		case FORMAT_ASTC_4x4:
+		case FORMAT_ASTC_4x4_HDR:
+		case FORMAT_ASTC_8x8:
+		case FORMAT_ASTC_8x8_HDR:
 			return 1;
 		case FORMAT_LA8:
-			return 2;
-		case FORMAT_R8:
-			return 1;
 		case FORMAT_RG8:
+		case FORMAT_RGBA4444:
+		case FORMAT_RGB565:
+		case FORMAT_RH:
 			return 2;
 		case FORMAT_RGB8:
 			return 3;
 		case FORMAT_RGBA8:
-			return 4;
-		case FORMAT_RGBA4444:
-			return 2;
-		case FORMAT_RGB565:
-			return 2;
 		case FORMAT_RF:
+		case FORMAT_RGBE9995:
+		case FORMAT_RGH:
 			return 4;
+		case FORMAT_RGBH:
+		case FORMAT_RGBAH:
+			return 6;
 		case FORMAT_RGF:
 			return 8;
 		case FORMAT_RGBF:
 			return 12;
 		case FORMAT_RGBAF:
 			return 16;
-		case FORMAT_RH:
-			return 2;
-		case FORMAT_RGH:
-			return 4;
-		case FORMAT_RGBH:
-			return 6;
-		case FORMAT_RGBAH:
-			return 8;
-		case FORMAT_RGBE9995:
-			return 4;
-		case FORMAT_DXT1:
-			return 1;
-		case FORMAT_DXT3:
-			return 1;
-		case FORMAT_DXT5:
-			return 1;
-		case FORMAT_RGTC_R:
-			return 1;
-		case FORMAT_RGTC_RG:
-			return 1;
-		case FORMAT_BPTC_RGBA:
-			return 1;
-		case FORMAT_BPTC_RGBF:
-			return 1;
-		case FORMAT_BPTC_RGBFU:
-			return 1;
-		case FORMAT_ETC:
-			return 1;
-		case FORMAT_ETC2_R11:
-			return 1;
-		case FORMAT_ETC2_R11S:
-			return 1;
-		case FORMAT_ETC2_RG11:
-			return 1;
-		case FORMAT_ETC2_RG11S:
-			return 1;
-		case FORMAT_ETC2_RGB8:
-			return 1;
-		case FORMAT_ETC2_RGBA8:
-			return 1;
-		case FORMAT_ETC2_RGB8A1:
-			return 1;
-		case FORMAT_ETC2_RA_AS_RG:
-			return 1;
-		case FORMAT_DXT5_RA_AS_RG:
-			return 1;
-		case FORMAT_ASTC_4x4:
-			return 1;
-		case FORMAT_ASTC_4x4_HDR:
-			return 1;
-		case FORMAT_ASTC_8x8:
-			return 1;
-		case FORMAT_ASTC_8x8_HDR:
-			return 1;
 		case FORMAT_MAX: {
 		}
 	}
